@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CabinsPage from './cabins/page';
-import bg from '@/public/bg.png';
+import bg from '@/public/img/bg.png';
 
 import Image from 'next/image';
 
