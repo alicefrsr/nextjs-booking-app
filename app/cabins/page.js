@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import CabinsList from '../_components/CabinsList';
 import Spinner from '../_components/Spinner';
 import Filter from '../_components/Filter';
+import ReservationReminder from '../_components/ReservationReminder';
 
 // only applies to statically gen pages
 // export const revalidate = 3600; // refresh every hour
@@ -35,6 +36,7 @@ export default function Page({ searchParams }) {
       </div>
       <Suspense fallback={<Spinner />} key={filter}>
         <CabinsList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
