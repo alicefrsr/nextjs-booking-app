@@ -62,7 +62,7 @@ export async function getGuest(email) {
     .eq('email', email)
     .single();
 
-  // No error here! We handle the possibility of no guest in the sign in callback
+  // No error here! We handle the possibility of no guest in the sign in callback in lib/auth.js
   return data;
 }
 
