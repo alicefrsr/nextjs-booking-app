@@ -15,6 +15,10 @@ const authConfig = {
       return !!auth?.user; // return true or false
     },
   },
+  pages: {
+    signIn: '/login',
+  },
 };
 
-export const { auth, handlers } = NextAuth(authConfig);
+// signIn and signOut for the auth flow to happen server side (server actions)
+export const { auth, handlers, signIn, signOut } = NextAuth(authConfig);
