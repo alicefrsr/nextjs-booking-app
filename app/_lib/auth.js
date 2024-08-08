@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth';
 import Google from 'next-auth/providers/google';
+import { createGuest, getGuest } from './data-service';
 
 const authConfig = {
   providers: [
@@ -20,10 +21,12 @@ const authConfig = {
           await createGuest({
             email: user.email,
             fullName: user.name,
+            // nationalID: '',
+            // countryFlag: '',
+            // nationality: '',
           });
         return true;
       } catch (error) {
-        console.log('aaargh');
         return false;
       }
     },
